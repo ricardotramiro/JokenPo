@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Winky Rough", sans-serif;
+}
+
+body {
+  background-image: url('download (1).jpeg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+} 
+
+.container {
+  padding: 20px;
+  background-color: #fff9f9c0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  margin: 30px 0;
+  display: flex;;
+  gap: 40px;
+  
+}
+
+button {
+  padding: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+
+}
+
+button:hover {opacity: .8;}
+
+button:active {opacity: .5;}
+
+.result {
+  font-size: 40px;
+  font-weight: bold;
+  color: #04633af2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* mudar a cor dos elementos */
+#stone {
+  background-color: aqua;
+}
+
+#paper {
+  background-color: yellow;
+}
+
+#scissors {
+  background-color: aquamarine;
+}
+
+h1 {
+  color: rgba(8, 70, 240, 0.896);
+  font-size: 80px;
+}
+
+p {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgba(8, 70, 240, 0.896);
+}
+
+.your-score span {
+  color: #06f81a;
+}
+
+.machine-score span {
+  color: #f11505b1 ;
+}
+
+.reset-btn {
+  margin-top: 20px;
+  background-color: #fff9f9c0;
+  color: #333;
+  font-size: 28px;
+  padding: 10px 20px;
+}
+
+/* Tablet */
+@media (max-whidth: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    font-size: 40px;
+    padding: 8px;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .result {
+    font-size: 30px;
+  }
+
+  .reset-btn {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+  
+}
+
+/* Celular */
+@media (max-whidth: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .result {
+    font-size: 24px;
+  }
+
+  .reset-btn {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+}
+
