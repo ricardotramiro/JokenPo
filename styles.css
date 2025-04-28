@@ -96,8 +96,8 @@ p {
   padding: 10px 20px;
 }
 
-/* Tablet  */
-@media screen and (max-whidth: 1024px) {
+/* Tablet */
+@media screen and (max-width: 1024px) {
   .container {
     width: 90%;
     padding: 15px;
@@ -131,9 +131,9 @@ p {
 }
 
 /* Celular pequeno */
-@media screen and (max-whidth: 480px) {
+@media screen and (max-width: 480px) {
   .container {
-    width: 90px;
+    width: 90%;
     padding: 8px;
   }
   h1 {
@@ -165,8 +165,8 @@ p {
   }
 }
 
-/* celulares pequenos */
-@media screen and (max-whidth: 768px) {
+/* Celulares médios */
+@media screen and (max-width: 768px) {
   .container {
     width: 90%;
     padding: 10px;
