@@ -20,4 +20,4 @@ Animações interativas: Botões e elementos do jogo têm transições suaves e 
 
 O projeto foi criado com o objetivo de aplicar e consolidar meus conhecimentos de <b>front-end</b>, além de ser uma forma divertida de melhorar minhas habilidades de desenvolvimento web.</span>
 
-<img src https://github.com/ricardotramiro/JokenPo/blob/main/JokenP%C3%B5.png?raw=true>
+<img src="https://github.com/ricardotramiro/JokenPo/blob/main/JokenP%C3%B5.png?raw=true">
