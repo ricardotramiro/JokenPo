@@ -6,16 +6,16 @@
 }
 
 body {
-  background-image: url("download (1).jpeg");
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: linear-gradient(90deg,rgba(9, 58, 79, 0.83) 0%, rgba(33, 150, 82, 1) 50%, rgba(194, 180, 54, 1) 100%);
 }
 
 .container {
   padding: 20px;
-  background-color: #fff9f9c0;
+  background-color: #21f3e51c;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ button:active {
 .result {
   font-size: 40px;
   font-weight: bold;
-  color: #04633af2;
+  color: #fff23b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,10 +90,12 @@ p {
 
 .reset-btn {
   margin-top: 20px;
-  background-color: #fff9f9c0;
-  color: #333;
+  background-color: white;
+  color:red;
   font-size: 28px;
   padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px;
 }
 
 /* Tablet */
