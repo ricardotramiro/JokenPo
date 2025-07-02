@@ -14,8 +14,6 @@ Destaques do projeto:
 
 Design responsivo: O jogo se adapta a diferentes tamanhos de tela, proporcionando uma boa experiência tanto em desktops quanto em dispositivos móveis.
 
-Alternância entre modo claro e modo escuro: O usuário pode mudar o tema do jogo de acordo com sua preferência.
-
 Animações interativas: Botões e elementos do jogo têm transições suaves e efeitos de hover/active para uma experiência mais dinâmica.</strong>
 
 O projeto foi criado com o objetivo de aplicar e consolidar meus conhecimentos de <b>front-end</b>, além de ser uma forma divertida de melhorar minhas habilidades de desenvolvimento web.</span>
