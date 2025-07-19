@@ -4,7 +4,7 @@
 
 <h2>Tecnologias usadas:</h2>
 
-<span><strong>HTML: Estruturação da página e dos elementos do jogo.HTML: Estruturação da página e dos elementos do jogo.
+<span><strong>HTML: Estruturação da página e dos elementos do jogo.
 
 CSS: Estilização e design responsivo, garantindo uma boa experiência em diferentes dispositivos.
 
