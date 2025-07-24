@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(90deg,rgba(9, 58, 79, 0.83) 0%, rgba(33, 150, 82, 1) 50%, rgba(194, 180, 54, 1) 100%);
+  background: linear-gradient(90deg, rgba(9, 58, 79, 0.83) 0%, rgba(33, 150, 82, 1) 50%, rgba(194, 180, 54, 1) 100%);
 }
 
 .container {
@@ -21,6 +21,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+h1 {
+  color: rgba(8, 70, 240, 0.896);
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .buttons {
@@ -29,33 +38,25 @@ body {
   gap: 40px;
 }
 
-button {
+.play-btn {
   padding: 10px;
   font-size: 50px;
   cursor: pointer;
   border: none;
   border-radius: 10px;
+  transition: transform 0.2s ease;
 }
 
-button:hover {
+.play-btn:hover {
   opacity: 0.8;
+  transform: scale(1.1);
 }
 
-button:active {
+.play-btn:active {
   opacity: 0.5;
+  transform: scale(0.95);
 }
 
-.result {
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff23b;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* mudar a cor dos elementos */
 #stone {
   background-color: aqua;
 }
@@ -68,16 +69,20 @@ button:active {
   background-color: aquamarine;
 }
 
-h1 {
-  color: rgba(8, 70, 240, 0.896);
-  font-size: 80px;
+.result {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff23b;
+  text-align: center;
+  margin-top: 20px;
 }
 
 p {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: rgba(8, 70, 240, 0.896);
+  color: navy;
+  text-align: center;
 }
 
 .your-score span {
@@ -88,105 +93,59 @@ p {
   color: #f11505b1;
 }
 
+.scoreboard {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
 .reset-btn {
-  margin-top: 20px;
   background-color: white;
-  color:red;
+  color: red;
   font-size: 28px;
   padding: 10px 20px;
   border-radius: 20px;
-  border: 1px;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Tablet */
-@media screen and (max-width: 1024px) {
+.reset-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 768px) {
   .container {
-    width: 90%;
-    padding: 15px;
+    padding: 10px;
   }
+
   h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .buttons {
-    gap: 30px;
+    gap: 20px;
   }
 
-  button {
+  .play-btn {
     font-size: 40px;
-    padding: 8px;
   }
 
-  p {
-    font-size: 24px;
-    text-align: center;
-  }
-
+  p,
   .result {
-    font-size: 30px;
+    font-size: 20px;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .reset-btn {
     font-size: 24px;
     padding: 8px 16px;
-  }
-}
-
-/* Celular pequeno */
-@media screen and (max-width: 480px) {
-  .container {
-    width: 90%;
-    padding: 8px;
-  }
-  h1 {
-    font-size: 40px;
-  }
-
-  .buttons {
-    flex-direction: unset;
-    gap: 15px;
-  
-  }
-
-  button {
-    font-size: 30px;
-    padding: 6px;
-  }
-
-  p {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .result {
-    font-size: 24px;
-  }
-
-  .reset-btn {
-    font-size: 20px;
-    padding: 6px 12px;
-  }
-}
-
-/* Celulares médios */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%;
-    padding: 10px;
-  }
-  h1 {
-    font-size: 50px;
-  }
-  .buttons {
-    flex-direction: unset;
-    gap: 20px;
-  }
-  button {
-    font-size: 35px;
-    padding: 8px;
-  }
-  p {
-    font-size: 18px;
-    text-align: center;
   }
 }
