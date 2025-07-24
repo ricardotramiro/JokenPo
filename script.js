@@ -1,37 +1,45 @@
 const result = document.querySelector(".result");
+const choicesText = document.querySelector("#choices");
 const humanScore = document.querySelector("#human-score");
 const machineScore = document.querySelector("#machine-score");
-const resetBtn = document.querySelector(".reset-btn");
+const resetBtn = document.querySelector("#reset");
 
 let humanScoreNumber = 0;
 let machineScoreNumber = 0;
 
+const playBtns = document.querySelectorAll(".play-btn");
 
-//ENUNS
-const GAME_OPTIONS = {
-    STONE: 'stone',
-    PAPER: 'paper',
-    SCISSORS: 'scissors'
-}
+// Eventos de clique nos botões de jogada
+playBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const choice = btn.id;
+    if (isValidChoice(choice)) {
+      playTheGame(choice, playMachine());
+    }
+  });
+});
 
-const playHuman = (humanChoice) => {
-  playTheGame(humanChoice, playMachine());
+const isValidChoice = (choice) => {
+  return ["stone", "paper", "scissors"].includes(choice);
 };
 
 const playMachine = () => {
   const choices = ["stone", "paper", "scissors"];
   const randomNumber = Math.floor(Math.random() * 3);
-
-  console.log(randomNumber);
-
   return choices[randomNumber];
 };
 
+const emoji = (choice) => {
+  if (choice === "stone") return "🪨";
+  if (choice === "paper") return "📄";
+  return "✂️";
+};
+
 const playTheGame = (human, machine) => {
-  console.log("Humano:" + human + "maquina:" + machine);
+  choicesText.innerHTML = `Você jogou: ${emoji(human)} | Máquina jogou: ${emoji(machine)}`;
 
   if (human === machine) {
-    result.innerHTML = "Deu empate";
+    result.innerHTML = "Empate! 🤝";
   } else if (
     (human === "paper" && machine === "stone") ||
     (human === "stone" && machine === "scissors") ||
@@ -39,22 +47,21 @@ const playTheGame = (human, machine) => {
   ) {
     humanScoreNumber++;
     humanScore.innerHTML = humanScoreNumber;
-    result.innerHTML = "Você ganhou uhuuu";
+    result.innerHTML = "Você ganhou! 🎉";
   } else {
     machineScoreNumber++;
     machineScore.innerHTML = machineScoreNumber;
-    result.innerHTML = "Você perdeu hahaha";
+    result.innerHTML = "Você perdeu! 😢";
   }
 };
 
-// 4. Função de reset
 const resetGame = () => {
   humanScoreNumber = 0;
   machineScoreNumber = 0;
   humanScore.innerHTML = 0;
   machineScore.innerHTML = 0;
   result.innerHTML = "";
+  choicesText.innerHTML = "Escolha uma opção acima para jogar";
 };
 
-// 5. Evento de clique no botão
 resetBtn.addEventListener("click", resetGame);
